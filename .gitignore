@@ -1,0 +1,23 @@
+# Compiled files
+*/myprogram
+*/myprogram.exe
+*.o
+*.exe
+
+# Generated test files
+*/fileA
+*/fileB
+*/fileC
+*/fileD
+*/*.gz
+*/result.txt
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# IDE
+.vscode/
+.idea/
