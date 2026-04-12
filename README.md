@@ -27,3 +27,43 @@ cd task1-sparse
 make
 ./runme.sh
 ```
+
+
+## Task 2 — File Lock via `<file>.lck`
+
+Программа реализует примитивную файловую блокировку через lock-файл <myfile>.lck.
+
+### Сборка
+
+```bash
+cd task2-lock
+make
+```
+
+### Запуск
+
+```bash
+./lockprog [-s stats.txt] [-d delay_ms] myfile
+```
+
+### Параметры
+
+- `myfile` — базовый путь; lock-файл: `myfile.lck`
+- `-s` — путь к файлу статистики (по умолчанию `stats.txt`)
+- `-d` — пауза между попытками захвата lock (по умолчанию `100`)
+
+### Скрипт:
+
+- собирает проект
+- запускает 10 параллельных процессов на shared.txt
+- через TEST_DURATION секунд отправляет всем SIGINT
+- дожидается завершения
+- формирует отчёт result.txt
+
+### Очистка
+
+```bash
+cd task2-lock
+make clean
+rm -f result.txt stats.txt shared.txt shared.txt.lck
+```

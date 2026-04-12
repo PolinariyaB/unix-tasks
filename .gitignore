@@ -1,6 +1,9 @@
+```gitignore
 # Compiled files
 */myprogram
 */myprogram.exe
+*/lockprog
+*/lockprog.exe
 *.o
 *.exe
 
@@ -11,6 +14,9 @@
 */fileD
 */*.gz
 */result.txt
+*/stats.txt
+*/shared.txt
+*/*.lck
 
 # System files
 .DS_Store
