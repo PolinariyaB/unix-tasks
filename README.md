@@ -29,7 +29,7 @@ make
 ```
 
 
-## Task 2 — File Lock via `<file>.lck`
+## Task 2 — File Lock
 
 Программа реализует примитивную файловую блокировку через lock-файл <myfile>.lck.
 
@@ -66,4 +66,14 @@ make
 cd task2-lock
 make clean
 rm -f result.txt stats.txt shared.txt shared.txt.lck
+```
+
+## Task 3 — myinit (daemon + children + SIGHUP)
+
+Упрощённый `init`: демонизация, дочерние процессы по конфигу, рестарт при выходе, перезагрузка конфига по `SIGHUP`, лог в `/tmp/myinit.log`.
+
+```bash
+cd task3-myinit
+make
+bash runme.sh
 ```
