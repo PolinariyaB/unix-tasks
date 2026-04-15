@@ -4,6 +4,8 @@
 */myprogram.exe
 */lockprog
 */lockprog.exe
+*/myinit
+*/test_worker
 *.o
 *.exe
 
@@ -17,6 +19,10 @@
 */stats.txt
 */shared.txt
 */*.lck
+*/myinit
+*/test_worker
+*/result.txt
+*/config.txt
 
 # System files
 .DS_Store

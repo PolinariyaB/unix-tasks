@@ -1,0 +1,1 @@
+__WORKER__ onlyone __WORKDIR__/in1 __WORKDIR__/out1

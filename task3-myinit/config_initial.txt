@@ -1,0 +1,3 @@
+__WORKER__ proc1 __WORKDIR__/in1 __WORKDIR__/out1
+__WORKER__ proc2 __WORKDIR__/in2 __WORKDIR__/out2
+__WORKER__ proc3 __WORKDIR__/in3 __WORKDIR__/out3
