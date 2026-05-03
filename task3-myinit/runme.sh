@@ -72,7 +72,6 @@ write_block "TEST 1: initial children count" "3 test_worker children" "$c1" "$te
 
 proc2_pid="$(find_test_child_pid_by_name "proc2" || true)"
 if [[ -n "$proc2_pid" ]]; then
-    # Match only exact "test_worker proc2" command line, then verify PPID.
     pkill -TERM -f "^${WORKER//\//\\/}[[:space:]]+proc2$" 2>/dev/null || true
     if ps -eo pid=,ppid=,args= 2>/dev/null | awk -v pid="$proc2_pid" -v ppid="$MYINIT_PID" '
         $1 == pid && $2 == ppid && $0 ~ /test_worker/ && index($0, "proc2") > 0 { found=1 }
